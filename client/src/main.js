@@ -17,7 +17,8 @@ const router = new VueRouter({
   mode: 'history',
 });
 
-store.createStateStream().subscribe(state => console.log('Initial State', state));
+// Removed state as subscribe parameter, was undefined
+store.createStateStream().subscribe(() => console.log('Initial State'));
 
 const app = new Vue({
   el: '#App',

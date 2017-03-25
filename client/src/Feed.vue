@@ -27,7 +27,7 @@
     },
     computed: {
       feed() {
-        console.log('computed feedItems');
+        console.log('computed feedItems', this.store);
         return this.shuffle(this.$store.state.feedItems);
       },
     },
